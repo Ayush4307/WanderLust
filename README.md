@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🌍 WanderLust UI
 
-# Run and deploy your AI Studio app
+A premium, modern travel agency landing page showcasing high-end frontend development techniques. 
 
-This contains everything you need to run your app locally.
+This project features a stunning aesthetic with custom glassmorphism, advanced scroll-linked canvas animations, and butter-smooth component transitions.
 
-View your app in AI Studio: https://ai.studio/apps/93851e1f-5c9d-4043-9fdd-5a3faa4ec5cc
+## ✨ Features
 
-## Run Locally
+- **Scroll-Linked Animations:** An image-sequence canvas animation tied directly to the user's scroll position for a highly interactive experience.
+- **Glassmorphism UI:** Beautiful, translucent components with heavy backdrop blurs (`backdrop-blur-xl`) that create a deeply layered, premium feel.
+- **Dynamic Theming:** Built-in support for multiple design themes, including a stark "Minimalism" and a classic "Reference" look.
+- **Smooth Entrances:** Framer Motion is utilized heavily for staggered, elegant entrance animations (`fadeInUp`).
+- **Modern Typography:** A sophisticated mix of sans-serif, serif, and monospace fonts tailored for a luxury aesthetic.
 
-**Prerequisites:**  Node.js
+## 🚀 Tech Stack
 
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS v4**
+- **Framer Motion** (`motion/react`)
+- **Lucide Icons**
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 💻 Getting Started
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ayush4307/WanderLust.git
+   ```
+2. Navigate into the directory:
+   ```bash
+   cd WanderLust
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running Locally
+
+To start the development server, run:
+```bash
+npm run dev
+```
+The app will be available at `http://localhost:3000`.
+
+## 🤝 AI Integration
+This project is pre-configured with the `@google/genai` SDK. To enable any experimental AI features locally, copy `.env.example` to `.env.local` and add your Gemini API Key.
