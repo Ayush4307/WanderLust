@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowUpRight, Zap, Layout, Eye, Info, Sparkles, Layers, Globe, Compass, Monitor, Users, Calendar, Clock } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
