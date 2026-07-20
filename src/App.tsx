@@ -215,12 +215,21 @@ export default function App() {
                       <button
                         key={item}
                         onClick={() => setCurrentTab(item)}
-                        className={`px-4.5 py-1 rounded-full text-xs font-medium transition-all shrink-0 whitespace-nowrap ${currentTab === item
-                          ? "bg-white text-black shadow-sm font-semibold"
-                          : "text-zinc-400 hover:text-white"
-                          }`}
+                        className={`relative px-4.5 py-1 rounded-full text-xs font-medium transition-colors duration-300 shrink-0 whitespace-nowrap ${
+                          currentTab === item
+                            ? "text-black font-semibold"
+                            : "text-zinc-400 hover:text-white"
+                        }`}
                       >
-                        {item}
+                        {currentTab === item && (
+                          <motion.div
+                            layoutId="active-pill"
+                            className="absolute inset-0 bg-white rounded-full shadow-sm"
+                            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                            style={{ zIndex: 0 }}
+                          />
+                        )}
+                        <span className="relative z-10">{item}</span>
                       </button>
                     ))}
                   </nav>
