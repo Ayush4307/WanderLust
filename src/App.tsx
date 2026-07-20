@@ -83,8 +83,25 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Constants representing exact copy from the reference image
-  const navItems = ["Home", "Solutions", "Projects", "About us", "Contact"];
+  // Renamed to fit the WanderLust travel theme
+  const navItems = ["Home", "Destinations", "Experiences", "About us", "Contact"];
+
+  const handleNavClick = (item: string) => {
+    setCurrentTab(item);
+    let elementId = "";
+    if (item === "Home") elementId = "sunrock-banner-container";
+    if (item === "Destinations") elementId = "trusted-leaders-section";
+    if (item === "Experiences") elementId = "why-travel-section";
+    if (item === "About us") elementId = "testimonial-metric-section";
+    if (item === "Contact") elementId = "testimonial-metric-section"; 
+
+    if (elementId) {
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   // Optimized padding classes to fit everything in 900px perfectly with zero scroll
   const paddingClasses = {
@@ -191,11 +208,11 @@ export default function App() {
                   {navItems.slice(0, 4).map((item) => (
                     <div
                       key={item}
-                      onClick={() => setCurrentTab(item)}
+                      onClick={() => handleNavClick(item)}
                       className="flex flex-col cursor-pointer group/nav shrink-0 whitespace-nowrap"
                     >
                       <span className="text-[8px] tracking-widest text-white/30 uppercase mb-0.5 font-mono transition-colors group-hover/nav:text-white/60">
-                        {item === "Home" ? "01" : item === "Solutions" ? "02" : item === "Projects" ? "03" : "04"}
+                        {item === "Home" ? "01" : item === "Destinations" ? "02" : item === "Experiences" ? "03" : "04"}
                       </span>
                       <span className={`text-xs font-semibold uppercase tracking-wider transition-all ${currentTab === item ? "text-white border-b border-white pb-0.5" : "text-white/60 hover:text-white"
                         }`}>
@@ -214,7 +231,7 @@ export default function App() {
                     {navItems.map((item) => (
                       <button
                         key={item}
-                        onClick={() => setCurrentTab(item)}
+                        onClick={() => handleNavClick(item)}
                         className={`relative px-4.5 py-1 rounded-full text-xs font-medium transition-colors duration-300 shrink-0 whitespace-nowrap ${
                           currentTab === item
                             ? "text-black font-semibold"
