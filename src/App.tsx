@@ -1032,7 +1032,8 @@ export default function App() {
 
       </main>
 
-
+        </div>{/* end sticky */}
+      </div>{/* end 500vh scroll driver */}
 
     </div>
   );
