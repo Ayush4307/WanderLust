@@ -39,49 +39,63 @@ export default function App() {
 
     const frameCount = 300;
 
-    const currentFrame = (index: number) => (
-      `/frames/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`
-    );
+    const currentFrame = (index: number) =>
+      `/frames/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`;
 
-    const preloadImages = () => {
-      for (let i = 0; i < frameCount; i++) {
-        const img = new Image();
-        img.src = currentFrame(i);
-      }
+    // Size canvas to the window, not the image
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Load first frame immediately so something is visible on page load
+    const firstImg = new Image();
+    firstImg.src = currentFrame(0);
+    firstImg.onload = () => {
+      context.drawImage(firstImg, 0, 0, canvas.width, canvas.height);
     };
 
-    const img = new Image();
-    img.src = currentFrame(0);
-
-    img.onload = function () {
-      canvas.width = img.width;
-      canvas.height = img.height;
-      context.drawImage(img, 0, 0);
-    };
-
-    const updateImage = (index: number) => {
-      img.src = currentFrame(index);
-      context.drawImage(img, 0, 0);
-    };
+    // Preload all frames into an array for fast access
+    const images: HTMLImageElement[] = [];
+    for (let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      img.src = currentFrame(i);
+      images[i] = img;
+    }
 
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop;
       const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+      if (maxScrollTop <= 0) return;
 
       const scrollFraction = scrollTop / maxScrollTop;
-
       const frameIndex = Math.min(
         frameCount - 1,
         Math.max(0, Math.floor(scrollFraction * frameCount))
       );
 
-      requestAnimationFrame(() => updateImage(frameIndex));
+      const img = images[frameIndex];
+      if (!img) return;
+
+      requestAnimationFrame(() => {
+        if (img.complete) {
+          context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        } else {
+          img.onload = () => context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
+      });
+    };
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
 
     window.addEventListener('scroll', handleScroll);
-    preloadImages();
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   // Renamed to fit the WanderLust travel theme
@@ -112,20 +126,22 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black/10 text-white font-sans antialiased selection:bg-white selection:text-black flex flex-col justify-between relative overflow-hidden">
+    <div className="text-white font-sans antialiased selection:bg-white selection:text-black">
 
-      {/* Scroll Animation Canvas */}
+      {/* Scroll Animation Canvas - fixed behind everything */}
       <canvas
         ref={canvasRef}
-        className="fixed top-0 left-0 w-[100vw] h-[100vh] object-cover z-0 pointer-events-none opacity-100"
+        className="fixed top-0 left-0 w-full h-full object-cover z-0 pointer-events-none"
       />
 
+      {/* Tall scroll area to drive the canvas animation - 500vh gives full 300 frames */}
+      <div style={{ height: "500vh" }} className="relative z-10">
 
+        {/* Sticky UI container that stays in view while user scrolls */}
+        <div className="sticky top-0 h-screen overflow-hidden">
 
-
-
-      {/* Main Container - Framed by Minimalist Visual Accents */}
-      <main className="flex-1 flex flex-col justify-center items-center w-full relative z-10 px-4 md:px-12 py-4">
+          {/* Main Container */}
+          <main className="flex-1 flex flex-col justify-center items-center w-full relative z-10 px-4 md:px-12 py-4 h-full">
 
         {/* Banner Section wrapper with solid black background, pure white accents, DM sans */}
         {/* EXACT HEIGHT SPECIFICATION: 760px compact banner section for first-fold visibility */}
