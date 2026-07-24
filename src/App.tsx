@@ -126,7 +126,7 @@ export default function App() {
   };
 
   return (
-    <div className="text-white font-sans antialiased selection:bg-white selection:text-black">
+    <div className="bg-black text-white font-sans antialiased selection:bg-white selection:text-black">
 
       {/* Scroll Animation Canvas - fixed behind everything */}
       <canvas
@@ -138,16 +138,13 @@ export default function App() {
       <div style={{ height: "500vh" }} className="relative z-10">
 
         {/* Sticky UI container that stays in view while user scrolls */}
-        <div className="sticky top-0 h-screen overflow-hidden">
-
-          {/* Main Container */}
-          <main className="flex-1 flex flex-col justify-center items-center w-full relative z-10 px-4 md:px-12 py-4 h-full">
+        <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center px-4 md:px-12">
 
         {/* Banner Section wrapper with solid black background, pure white accents, DM sans */}
         {/* EXACT HEIGHT SPECIFICATION: 760px compact banner section for first-fold visibility */}
         <div
           id="sunrock-banner-container"
-          className={`w-full max-w-[1360px] h-[760px] bg-transparent relative overflow-hidden transition-all duration-500 flex flex-col ${designTheme === "minimalism"
+          className={`w-full max-w-[1360px] h-screen bg-transparent relative overflow-hidden transition-all duration-500 flex flex-col ${designTheme === "minimalism"
             ? "rounded-none"
             : "rounded-3xl"
             }`}
@@ -1030,9 +1027,7 @@ export default function App() {
           </div>
         </motion.div>
 
-      </main>
-
-        </div>{/* end sticky */}
+      </div>{/* end sticky */}
       </div>{/* end 500vh scroll driver */}
 
     </div>
