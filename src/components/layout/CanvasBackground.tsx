@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function CanvasBackground() {
+export default function CanvasBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
