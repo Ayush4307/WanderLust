@@ -17,6 +17,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, curren
                     <span className="text-white font-semibold tracking-widest text-xs uppercase">WanderLust</span>
                     <button
                       onClick={() => setIsMenuOpen(false)}
+                      aria-label="Close menu"
                       className="text-white/60 hover:text-white transition-colors text-2xl leading-none"
                     >
                       ✕
