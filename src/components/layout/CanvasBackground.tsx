@@ -9,6 +9,8 @@ export default function CanvasBackground() {
     const context = canvas.getContext("2d");
     if (!context) return;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const frameCount = 300;
 
     const currentFrame = (index: number) =>
@@ -24,6 +26,22 @@ export default function CanvasBackground() {
     firstImg.onload = () => {
       context.drawImage(firstImg, 0, 0, canvas.width, canvas.height);
     };
+
+    if (prefersReducedMotion) {
+      const handleResize = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        if (firstImg.complete) {
+          context.drawImage(firstImg, 0, 0, canvas.width, canvas.height);
+        }
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
 
     // Preload all frames into an array for fast access
     const images: HTMLImageElement[] = [];
