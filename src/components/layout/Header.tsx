@@ -29,7 +29,7 @@ export default function Header({ designTheme, currentTab, handleNavClick, showHe
               {/* Central Navigation Items - Absolutely centered in a single line */}
               {designTheme === "minimalism" ? (
                 // Stark Minimalist Nav
-                <nav className="hidden md:flex gap-10 justify-center items-center text-left absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 whitespace-nowrap flex-row flex-nowrap">
+                <nav aria-label="Primary navigation" className="hidden md:flex gap-10 justify-center items-center text-left absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 whitespace-nowrap flex-row flex-nowrap">
                   {showHelperOverlay && (
                     <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-[9px] font-mono bg-white text-black px-1 uppercase tracking-widest">Minimalist Menu</span>
                   )}
@@ -38,6 +38,7 @@ export default function Header({ designTheme, currentTab, handleNavClick, showHe
                       key={item}
                       type="button"
                       onClick={() => handleNavClick(item)}
+                      aria-current={currentTab === item ? "page" : undefined}
                       className="flex flex-col cursor-pointer group/nav shrink-0 whitespace-nowrap text-left"
                     >
                       <span className="text-[8px] tracking-widest text-white/30 uppercase mb-0.5 font-mono transition-colors group-hover/nav:text-white/60">
@@ -53,20 +54,21 @@ export default function Header({ designTheme, currentTab, handleNavClick, showHe
               ) : (
                 // Classic Reference Nav Pills - Absolutely centered with beautiful transparent blur in one single line
                 <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 hidden md:flex justify-center items-center">
-                  <nav className="flex flex-row flex-nowrap items-center gap-1 bg-zinc-950/45 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-lg relative whitespace-nowrap">
+                  <nav aria-label="Primary navigation" className="flex flex-row flex-nowrap items-center gap-1 bg-zinc-950/45 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-lg relative whitespace-nowrap">
                     {showHelperOverlay && (
                       <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-[9px] font-mono bg-white text-black px-1 uppercase tracking-widest">Pill Menu</span>
                     )}
                     {navItems.map((item) => (
                       <button
                         key={item}
+                        type="button"
                         onClick={() => handleNavClick(item)}
+                        aria-current={currentTab === item ? "page" : undefined}
                         className={`relative px-4.5 py-1 rounded-full text-xs font-medium transition-colors duration-300 shrink-0 whitespace-nowrap ${
                           currentTab === item
                             ? "text-black font-semibold"
                             : "text-zinc-400 hover:text-white"
-                        }`}
-                      >
+                        }`}>
                         {currentTab === item && (
                           <motion.div
                             layoutId="active-pill"
