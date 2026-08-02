@@ -50,4 +50,4 @@ npm run dev
 The app will be available at `http://localhost:3000`.
 
 ## 🤝 AI Integration
-This project is pre-configured with the `@google/genai` SDK. To enable any experimental AI features locally, copy `.env.example` to `.env.local` and add your Gemini API Key.
+This project is pre-configured with the `@google/genai` SDK. To enable experimental AI features locally, copy `.env.example` into `.env.local` and add your Gemini API key.
