@@ -36,7 +36,7 @@ export default function HeroSection({ staggerContainer, alignment, showHelperOve
 
               {/* SUBTEXT SPECIFICATION: Reduced size (14px) and kept font weight to regular (font-normal) */}
               <motion.p variants={fadeInUp} className={`text-[14px] text-zinc-400 font-normal leading-relaxed max-w-2xl mb-5 transition-all`}>
-                Discover India's most breathtaking destinations through thoughtfully crafted travel experiences. From the snow-covered Himalayas to the tropical beaches of Goa, we turn your dream vacation into unforgettable memories.
+                Discover India's most breathtaking places with thoughtfully crafted travel experiences — from the Himalayas to Goa. We turn your trip ideas into unforgettable memories.
               </motion.p>
 
               {/* Call-to-action Action Hub */}
