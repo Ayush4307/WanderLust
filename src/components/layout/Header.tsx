@@ -1,6 +1,15 @@
 import { motion, AnimatePresence } from "motion/react";
 
-export default function Header({ designTheme, currentTab, handleNavClick, showHelperOverlay, setIsMenuOpen, navItems }: any) {
+type HeaderProps = {
+  designTheme: "minimalism" | "reference";
+  currentTab: string;
+  handleNavClick: (item: string) => void;
+  showHelperOverlay: boolean;
+  setIsMenuOpen: (isOpen: boolean) => void;
+  navItems: string[];
+};
+
+export default function Header({ designTheme, currentTab, handleNavClick, showHelperOverlay, setIsMenuOpen, navItems }: HeaderProps) {
   return (
             <header className="w-full flex items-center justify-between gap-4 mb-2 relative z-20 shrink-0">
 
