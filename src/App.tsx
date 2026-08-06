@@ -9,6 +9,7 @@ import Testimonials from "./components/sections/Testimonials";
 import { motion, AnimatePresence, Variants } from "motion/react";
 
 type NavItem = "Home" | "Destinations" | "Experiences" | "About us" | "Contact";
+type SectionIdMap = Record<NavItem, string>;
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -40,7 +41,7 @@ export default function App() {
   // Renamed to fit the WanderLust travel theme
   const navItems: NavItem[] = ["Home", "Destinations", "Experiences", "About us", "Contact"];
 
-  const sectionIds: Record<string, string> = {
+  const sectionIds: SectionIdMap = {
     Home: "sunrock-banner-container",
     Destinations: "trusted-leaders-section",
     Experiences: "why-travel-section",
