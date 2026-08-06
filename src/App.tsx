@@ -38,14 +38,17 @@ export default function App() {
   // Renamed to fit the WanderLust travel theme
   const navItems = ["Home", "Destinations", "Experiences", "About us", "Contact"];
 
+  const sectionIds: Record<string, string> = {
+    Home: "sunrock-banner-container",
+    Destinations: "trusted-leaders-section",
+    Experiences: "why-travel-section",
+    "About us": "testimonial-metric-section",
+    Contact: "testimonial-metric-section",
+  };
+
   const handleNavClick = (item: string) => {
     setCurrentTab(item);
-    let elementId = "";
-    if (item === "Home") elementId = "sunrock-banner-container";
-    if (item === "Destinations") elementId = "trusted-leaders-section";
-    if (item === "Experiences") elementId = "why-travel-section";
-    if (item === "About us") elementId = "testimonial-metric-section";
-    if (item === "Contact") elementId = "testimonial-metric-section"; 
+    const elementId = sectionIds[item];
 
     if (elementId) {
       const element = document.getElementById(elementId);
