@@ -6,7 +6,6 @@ import HeroSection from "./components/sections/HeroSection";
 import Destinations from "./components/sections/Destinations";
 import Experiences from "./components/sections/Experiences";
 import Testimonials from "./components/sections/Testimonials";
-import { ArrowUpRight, Zap, Layout, Eye, Info, Sparkles, Layers, Globe, Compass, Monitor, Users, Calendar, Clock } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "motion/react";
 
 const fadeInUp: Variants = {
