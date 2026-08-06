@@ -1,6 +1,16 @@
 import { motion, AnimatePresence } from "motion/react";
 
-export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, currentTab, handleNavClick }: any) {
+type NavItem = "Home" | "Destinations" | "Experiences" | "About us" | "Contact";
+
+type MobileMenuProps = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: (open: boolean) => void;
+  navItems: NavItem[];
+  currentTab: NavItem;
+  handleNavClick: (item: NavItem) => void;
+};
+
+export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, currentTab, handleNavClick }: MobileMenuProps) {
   return (
             <AnimatePresence>
               {isMenuOpen && (
