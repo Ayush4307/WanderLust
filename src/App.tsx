@@ -8,6 +8,8 @@ import Experiences from "./components/sections/Experiences";
 import Testimonials from "./components/sections/Testimonials";
 import { motion, AnimatePresence, Variants } from "motion/react";
 
+type NavItem = "Home" | "Destinations" | "Experiences" | "About us" | "Contact";
+
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -31,12 +33,12 @@ export default function App() {
   const [paddingSize, setPaddingSize] = useState<"standard" | "compact" | "spacious">("compact");
   const [alignment, setAlignment] = useState<"center" | "left">("center");
   const [cardGlow, setCardGlow] = useState<boolean>(false);
-  const [currentTab, setCurrentTab] = useState<string>("Home");
+  const [currentTab, setCurrentTab] = useState<NavItem>("Home");
   const [showHelperOverlay, setShowHelperOverlay] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   // Renamed to fit the WanderLust travel theme
-  const navItems = ["Home", "Destinations", "Experiences", "About us", "Contact"];
+  const navItems: NavItem[] = ["Home", "Destinations", "Experiences", "About us", "Contact"];
 
   const sectionIds: Record<string, string> = {
     Home: "sunrock-banner-container",
@@ -46,7 +48,7 @@ export default function App() {
     Contact: "testimonial-metric-section",
   };
 
-  const handleNavClick = (item: string) => {
+  const handleNavClick = (item: NavItem) => {
     setCurrentTab(item);
     const elementId = sectionIds[item];
 
