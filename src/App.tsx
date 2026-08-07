@@ -7,8 +7,8 @@ import Destinations from "./components/sections/Destinations";
 import Experiences from "./components/sections/Experiences";
 import Testimonials from "./components/sections/Testimonials";
 import { motion, AnimatePresence, Variants } from "motion/react";
+import type { NavItem } from "./types/navigation";
 
-type NavItem = "Home" | "Destinations" | "Experiences" | "About us" | "Contact";
 type SectionIdMap = Record<NavItem, string>;
 
 const fadeInUp: Variants = {
