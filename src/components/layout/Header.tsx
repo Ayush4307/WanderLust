@@ -1,12 +1,13 @@
 import { motion, AnimatePresence } from "motion/react";
+import type { NavItem } from "../../types/navigation";
 
 type HeaderProps = {
   designTheme: "minimalism" | "reference";
-  currentTab: string;
-  handleNavClick: (item: string) => void;
+  currentTab: NavItem;
+  handleNavClick: (item: NavItem) => void;
   showHelperOverlay: boolean;
   setIsMenuOpen: (isOpen: boolean) => void;
-  navItems: string[];
+  navItems: NavItem[];
 };
 
 export default function Header({ designTheme, currentTab, handleNavClick, showHelperOverlay, setIsMenuOpen, navItems }: HeaderProps) {
