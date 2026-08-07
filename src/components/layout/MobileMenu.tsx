@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-
-type NavItem = "Home" | "Destinations" | "Experiences" | "About us" | "Contact";
+import type { NavItem } from "../../types/navigation";
 
 type MobileMenuProps = {
   isMenuOpen: boolean;
