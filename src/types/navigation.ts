@@ -1,0 +1,1 @@
+export type NavItem = "Home" | "Destinations" | "Experiences" | "About us" | "Contact";
