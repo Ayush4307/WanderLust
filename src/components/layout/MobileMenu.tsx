@@ -43,7 +43,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, curren
                 >
                   {/* Close button */}
                   <div className="flex justify-between items-center px-8 py-6 border-b border-white/10">
-                    <span className="text-white font-semibold tracking-widest text-xs uppercase">WanderLust</span>
+                    <span className="text-white font-semibold tracking-widest text-xs uppercase">WANDERLUST</span>
                     <button
                       type="button"
                       onClick={() => setIsMenuOpen(false)}
@@ -74,7 +74,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, curren
 
                   {/* Footer hint */}
                   <div className="px-10 py-6 text-white/30 text-xs tracking-widest uppercase">
-                    Explore the world with WanderLust
+                    Explore the world with WANDERLUST
                   </div>
                 </motion.div>
               )}

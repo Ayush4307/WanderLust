@@ -1,16 +1,16 @@
 # 🌍 WanderLust UI
 
-A premium, modern travel agency landing page showcasing high-end frontend development techniques. 
+A premium travel landing page with a dark, cinematic aesthetic, glassmorphism, and smooth motion-driven sections.
 
-This project features a stunning aesthetic with custom glassmorphism, advanced scroll-linked canvas animations, and butter-smooth component transitions.
+The experience is built around polished storytelling, scroll-linked canvas visuals, and mobile-friendly navigation.
 
 ## ✨ Features
 
-- **Scroll-Linked Animations:** An image-sequence canvas animation tied directly to the user's scroll position for a highly interactive experience.
-- **Glassmorphism UI:** Beautiful, translucent components with heavy backdrop blurs (`backdrop-blur-xl`) that create a deeply layered, premium feel.
-- **Dynamic Theming:** Built-in support for multiple design themes, including a stark "Minimalism" and a classic "Reference" look.
-- **Smooth Entrances:** Framer Motion is utilized heavily for staggered, elegant entrance animations (`fadeInUp`).
-- **Modern Typography:** A sophisticated mix of sans-serif, serif, and monospace fonts tailored for a luxury aesthetic.
+- **Scroll-Linked Animations:** An image-sequence canvas animation tied directly to scroll position for a more immersive experience.
+- **Glassmorphism UI:** Translucent components with backdrop blur (`backdrop-blur-xl`) for a layered premium feel.
+- **Dynamic Theming:** Built-in support for a stark "Minimalism" mode and a classic "Reference" look.
+- **Smooth Entrances:** Framer Motion powers staggered, elegant entrance animations (`fadeInUp`).
+- **Modern Typography:** A mix of sans-serif, serif, and monospace fonts tailored for a luxury travel aesthetic.
 
 ## 🚀 Tech Stack
 
@@ -20,6 +20,12 @@ This project features a stunning aesthetic with custom glassmorphism, advanced s
 - **Tailwind CSS v4**
 - **Framer Motion** (`motion/react`)
 - **Lucide Icons**
+
+## ♿ Accessibility
+
+- Keyboard-friendly navigation with visible focus states.
+- Mobile menu dismisses with Escape and is marked as a dialog.
+- Hero and testimonial imagery uses descriptive alt text and lazy loading where appropriate.
 
 ## 💻 Getting Started
 
