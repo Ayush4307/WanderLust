@@ -8,7 +8,7 @@ export default function Testimonials({ staggerContainer, fadeInUp, designTheme }
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           id="testimonial-metric-section"
-          className={`w-full max-w-[1360px] mt-12 bg-transparent relative overflow-hidden transition-all duration-500 p-6 md:p-12`}
+          className={`w-full max-w-[1360px] mt-12 scroll-mt-24 md:scroll-mt-32 bg-transparent relative overflow-hidden transition-all duration-500 p-6 md:p-12`}
         >
           {/* Subtle elegant background ambient blue glow */}
           <div className="absolute -right-40 -bottom-40 w-[600px] h-[600px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />

@@ -8,7 +8,7 @@ export default function Destinations({ staggerContainer, fadeInUp }: any) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           id="trusted-leaders-section"
-          className="w-full max-w-[1360px] mt-12 bg-transparent p-8 md:p-20 relative overflow-hidden transition-all duration-500 flex flex-col justify-center items-center"
+          className="w-full max-w-[1360px] mt-12 scroll-mt-24 md:scroll-mt-32 bg-transparent p-8 md:p-20 relative overflow-hidden transition-all duration-500 flex flex-col justify-center items-center"
         >
           {/* Subtle elegant radial background glow like the image */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-amber-500/5 via-orange-600/5 to-amber-700/5 blur-[120px] rounded-full pointer-events-none" />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import type { NavItem } from "../../types/navigation";
 
@@ -10,6 +11,22 @@ type MobileMenuProps = {
 };
 
 export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, currentTab, handleNavClick }: MobileMenuProps) {
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen, setIsMenuOpen]);
+
   return (
             <AnimatePresence>
               {isMenuOpen && (
@@ -19,12 +36,16 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, curren
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="Mobile navigation menu"
                   className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex flex-col"
                 >
                   {/* Close button */}
                   <div className="flex justify-between items-center px-8 py-6 border-b border-white/10">
                     <span className="text-white font-semibold tracking-widest text-xs uppercase">WanderLust</span>
                     <button
+                      type="button"
                       onClick={() => setIsMenuOpen(false)}
                       aria-label="Close menu"
                       className="text-white/60 hover:text-white transition-colors text-2xl leading-none"

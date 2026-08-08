@@ -101,6 +101,9 @@ export default function Header({ designTheme, currentTab, handleNavClick, showHe
                 )}
 
                 <button
+                  type="button"
+                  aria-label="Open navigation menu"
+                  aria-haspopup="dialog"
                   onClick={() => setIsMenuOpen(true)}
                   className={`text-[11px] font-bold uppercase tracking-[0.15em] transition-all flex items-center gap-2 shrink-0 ${designTheme === "minimalism"
                     ? "border border-white/20 hover:border-white px-5 py-2 rounded-none bg-transparent hover:bg-white hover:text-black"

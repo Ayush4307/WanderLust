@@ -9,7 +9,7 @@ export default function Experiences({ staggerContainer, fadeInUp, designTheme }:
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           id="why-travel-section"
-          className={`w-full max-w-[1360px] mt-12 bg-transparent relative overflow-hidden transition-all duration-500 flex flex-col justify-center items-start p-8 md:p-20`}
+          className={`w-full max-w-[1360px] mt-12 scroll-mt-24 md:scroll-mt-32 bg-transparent relative overflow-hidden transition-all duration-500 flex flex-col justify-center items-start p-8 md:p-20`}
         >
           {/* Headline block aligned to top-left */}
           <motion.div variants={fadeInUp} className="w-full text-left max-w-5xl mb-14 z-10">

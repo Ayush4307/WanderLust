@@ -44,13 +44,13 @@ export default function HeroSection({ staggerContainer, alignment, showHelperOve
 
                 {designTheme === "minimalism" ? (
                   // Stark square button from the "Clean Minimalism" design schema
-                  <button className="bg-white hover:bg-zinc-200 text-black px-10 py-4 text-xs font-bold uppercase tracking-[0.2em] transition-none rounded-none flex items-center gap-2.5 group active:scale-95 shadow-xl">
+                  <button type="button" className="bg-white hover:bg-zinc-200 text-black px-10 py-4 text-xs font-bold uppercase tracking-[0.2em] transition-none rounded-none flex items-center gap-2.5 group active:scale-95 shadow-xl">
                     Plan Your Dream Vacation
                     <ArrowUpRight size={13} className="stroke-[3px] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </button>
                 ) : (
                   // Original reference pill styled button with blue circular icon
-                  <button className="group relative flex items-center justify-between gap-3 bg-white hover:bg-zinc-100 text-black px-5 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-white/10 active:scale-[0.98]">
+                  <button type="button" className="group relative flex items-center justify-between gap-3 bg-white hover:bg-zinc-100 text-black px-5 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-white/10 active:scale-[0.98]">
                     <span className="text-[14px] tracking-tight pl-1 select-none">
                       Plan Your Dream Vacation
                     </span>
@@ -70,7 +70,7 @@ export default function HeroSection({ staggerContainer, alignment, showHelperOve
             </motion.div>
 
             {/* Spacer to push the cards to the bottom */}
-            <div className="flex-1" min-h="2rem" />
+            <div className="min-h-8 flex-1" />
 
             {/* 3. IMPACT STAT CARDS - Translucent background with heavy backdrop blur */}
             {/* Pushed to the absolute left and right boundaries with beautiful gaps in between */}
