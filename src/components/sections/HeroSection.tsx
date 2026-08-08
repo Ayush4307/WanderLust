@@ -44,13 +44,13 @@ export default function HeroSection({ staggerContainer, alignment, showHelperOve
 
                 {designTheme === "minimalism" ? (
                   // Stark square button from the "Clean Minimalism" design schema
-                  <button type="button" className="bg-white hover:bg-zinc-200 text-black px-10 py-4 text-xs font-bold uppercase tracking-[0.2em] transition-none rounded-none flex items-center gap-2.5 group active:scale-95 shadow-xl">
+                  <button type="button" className="bg-white hover:bg-zinc-200 text-black px-10 py-4 text-xs font-bold uppercase tracking-[0.2em] transition-none rounded-none flex items-center gap-2.5 group active:scale-95 shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                     Plan Your Dream Vacation
                     <ArrowUpRight size={13} className="stroke-[3px] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </button>
                 ) : (
                   // Original reference pill styled button with blue circular icon
-                  <button type="button" className="group relative flex items-center justify-between gap-3 bg-white hover:bg-zinc-100 text-black px-5 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-white/10 active:scale-[0.98]">
+                  <button type="button" className="group relative flex items-center justify-between gap-3 bg-white hover:bg-zinc-100 text-black px-5 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-white/10 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                     <span className="text-[14px] tracking-tight pl-1 select-none">
                       Plan Your Dream Vacation
                     </span>
@@ -61,7 +61,7 @@ export default function HeroSection({ staggerContainer, alignment, showHelperOve
                 )}
 
                 {designTheme === "minimalism" && (
-                  <button className="text-xs font-bold uppercase tracking-[0.2em] border-b border-white/60 hover:border-white pb-1.5 px-1 text-white/80 hover:text-white transition-all">
+                  <button type="button" className="text-xs font-bold uppercase tracking-[0.2em] border-b border-white/60 hover:border-white pb-1.5 px-1 text-white/80 hover:text-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                     Talk to Our Travel Experts
                   </button>
                 )}

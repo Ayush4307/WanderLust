@@ -14,7 +14,7 @@ export default function Experiences({ staggerContainer, fadeInUp, designTheme }:
           {/* Headline block aligned to top-left */}
           <motion.div variants={fadeInUp} className="w-full text-left max-w-5xl mb-14 z-10">
             <span className="text-blue-400 text-xs tracking-widest font-mono uppercase mb-4 block font-bold">
-              Why Wanderlust
+              Why WanderLust
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-[54px] leading-[1.18] tracking-tight text-white mb-6 font-sans">
               <span className="inline-block text-blue-400 mr-2 select-none font-bold">✦</span>

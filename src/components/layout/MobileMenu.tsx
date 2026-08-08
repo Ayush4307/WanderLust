@@ -48,7 +48,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, curren
                       type="button"
                       onClick={() => setIsMenuOpen(false)}
                       aria-label="Close menu"
-                      className="text-white/60 hover:text-white transition-colors text-2xl leading-none"
+                      className="text-white/60 hover:text-white transition-colors text-2xl leading-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                       ✕
                     </button>
@@ -63,11 +63,11 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen, navItems, curren
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.07, duration: 0.4, ease: "easeOut" }}
                         onClick={() => { handleNavClick(item); setIsMenuOpen(false); }}
-                        className={`text-left text-4xl md:text-5xl font-semibold py-3 border-b border-white/10 transition-colors ${
+                        className={`text-left text-4xl md:text-5xl font-semibold py-3 border-b border-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
                           currentTab === item ? "text-white" : "text-white/40 hover:text-white"
                         }`}
                       >
-                        {item}
+                          {item}
                       </motion.button>
                     ))}
                   </nav>

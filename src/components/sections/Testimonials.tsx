@@ -22,8 +22,10 @@ export default function Testimonials({ staggerContainer, fadeInUp, designTheme }
                 }`}>
                 <img
                   src="https://res.cloudinary.com/djeoh00s4/image/upload/v1783691519/ChatGPT_Image_Jul_10_2026_07_06_20_PM_h4qq2h.png"
-                  alt="Bernice Tay"
+                  alt="Portrait of Bernice Tay, founder of Omni Academy"
                   className="w-full h-full object-cover grayscale brightness-95 contrast-105 hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 {/* Elegant overlay shadow */}
@@ -50,7 +52,7 @@ export default function Testimonials({ staggerContainer, fadeInUp, designTheme }
               <div className="relative z-10 max-w-3xl mb-12">
                 <span className="text-blue-500 text-2xl font-serif italic mb-4 block select-none">“</span>
                 <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-[26px] font-bold leading-snug uppercase tracking-tight font-sans">
-                  “Wanderlust transformed my India trip into an unforgettable journey. Every moment was perfectly planned, yet felt spontaneous and magical.”
+                  “WanderLust transformed my India trip into an unforgettable journey. Every moment was perfectly planned, yet felt spontaneous and magical.”
                 </p>
               </div>
 

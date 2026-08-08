@@ -105,7 +105,7 @@ export default function Header({ designTheme, currentTab, handleNavClick, showHe
                   aria-label="Open navigation menu"
                   aria-haspopup="dialog"
                   onClick={() => setIsMenuOpen(true)}
-                  className={`text-[11px] font-bold uppercase tracking-[0.15em] transition-all flex items-center gap-2 shrink-0 ${designTheme === "minimalism"
+                  className={`text-[11px] font-bold uppercase tracking-[0.15em] transition-all flex items-center gap-2 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black ${designTheme === "minimalism"
                     ? "border border-white/20 hover:border-white px-5 py-2 rounded-none bg-transparent hover:bg-white hover:text-black"
                     : "bg-white/[0.04] backdrop-blur-md hover:bg-white/10 border border-white/10 rounded-full px-4 py-1.5 text-zinc-300 hover:text-white"
                   }`}

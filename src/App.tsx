@@ -42,7 +42,7 @@ export default function App() {
   const navItems: NavItem[] = ["Home", "Destinations", "Experiences", "About us", "Contact"];
 
   const sectionIds: SectionIdMap = {
-    Home: "sunrock-banner-container",
+    Home: "wanderlust-banner-container",
     Destinations: "trusted-leaders-section",
     Experiences: "why-travel-section",
     "About us": "testimonial-metric-section",
@@ -80,7 +80,7 @@ export default function App() {
         {/* Banner Section wrapper with solid black background, pure white accents, DM sans */}
         {/* EXACT HEIGHT SPECIFICATION: 760px compact banner section for first-fold visibility */}
         <div
-          id="sunrock-banner-container"
+          id="wanderlust-banner-container"
           className={`w-full max-w-[1360px] min-h-[90vh] bg-transparent relative overflow-hidden transition-all duration-500 flex flex-col ${designTheme === "minimalism"
             ? "rounded-none"
             : "rounded-3xl"
@@ -101,7 +101,7 @@ export default function App() {
           {designTheme === "minimalism" && (
             <div className="absolute bottom-28 right-0 pointer-events-none hidden lg:block select-none">
               <div className="writing-mode-vertical text-[9px] tracking-[0.5em] uppercase opacity-20 -rotate-90 origin-right pr-20 font-mono text-white/50">
-                ESTABLISHED MMXXVI — SUNROCK ENERGY DIVISION
+                ESTABLISHED MMXXVI — WANDERLUST TRAVEL DIVISION
               </div>
             </div>
           )}

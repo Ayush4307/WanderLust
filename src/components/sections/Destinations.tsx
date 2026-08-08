@@ -22,7 +22,7 @@ export default function Destinations({ staggerContainer, fadeInUp }: any) {
             </h2>
 
             <p className="text-zinc-400 text-sm md:text-base font-normal leading-relaxed max-w-lg font-sans">
-              Wanderlust has curated unforgettable journeys across India's most stunning destinations for over 5,000+ satisfied travelers
+              WanderLust has curated unforgettable journeys across India's most stunning destinations for over 5,000+ satisfied travelers
             </p>
           </motion.div>
 
