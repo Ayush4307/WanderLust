@@ -9,24 +9,24 @@ export default function Experiences({ staggerContainer, fadeInUp, designTheme }:
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           id="why-travel-section"
-          className={`w-full max-w-[1360px] mt-12 scroll-mt-24 md:scroll-mt-32 bg-transparent relative overflow-hidden transition-all duration-500 flex flex-col justify-center items-start p-8 md:p-20`}
+          className={`w-full max-w-[1360px] mt-8 scroll-mt-6 md:scroll-mt-8 bg-transparent relative overflow-hidden transition-all duration-500 flex flex-col justify-center items-start px-6 py-4 md:px-12 md:py-6`}
         >
           {/* Headline block aligned to top-left */}
-          <motion.div variants={fadeInUp} className="w-full text-left max-w-5xl mb-14 z-10">
-            <span className="text-blue-400 text-xs tracking-widest font-mono uppercase mb-4 block font-bold">
+          <motion.div variants={fadeInUp} className="w-full text-left max-w-5xl mb-8 z-10">
+            <span className="text-blue-400 text-xs tracking-widest font-mono uppercase mb-3 block font-bold">
               Why WanderLust
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-[54px] leading-[1.18] tracking-tight text-white mb-6 font-sans">
+            <h2 className="text-3xl sm:text-4xl md:text-[50px] leading-[1.15] tracking-tight text-white mb-4 font-sans">
               <span className="inline-block text-blue-400 mr-2 select-none font-bold">✦</span>
               <span className="font-bold text-white">Travel Beyond Destinations — Designed </span>
-              <span className={`inline-block px-4.5 py-0.5 rounded-full mx-1 text-2xl sm:text-3xl md:text-[45px] align-middle font-bold border uppercase tracking-wider ${designTheme === "minimalism"
+              <span className={`inline-block px-4.5 py-0.5 rounded-full mx-1 text-2xl sm:text-3xl md:text-[42px] align-middle font-bold border uppercase tracking-wider ${designTheme === "minimalism"
                 ? "bg-transparent border-white/30 rounded-none"
                 : "bg-zinc-900 border-white/10"
                 }`}>
                 around you
               </span>
             </h2>
-            <p className="text-zinc-400 text-sm font-normal leading-relaxed max-w-xl font-sans mt-4">
+            <p className="text-zinc-400 text-sm font-normal leading-relaxed max-w-xl font-sans mt-3">
               We believe every journey should feel effortless from beginning to end. Our travel experts ensure comfort, safety, and unforgettable memories at every step.
             </p>
           </motion.div>
@@ -198,7 +198,7 @@ export default function Experiences({ staggerContainer, fadeInUp, designTheme }:
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           id="popular-experiences-section"
-          className={`w-full max-w-[1360px] mt-12 bg-transparent relative overflow-hidden transition-all duration-500 p-8 md:p-16 flex flex-col justify-center`}
+          className={`w-full max-w-[1360px] mt-12 scroll-mt-24 md:scroll-mt-32 bg-transparent relative overflow-hidden transition-all duration-500 p-8 md:p-16 flex flex-col justify-center`}
         >
           {/* Subtitle and Heading */}
           <motion.div variants={fadeInUp} className="w-full text-center max-w-3xl mx-auto mb-12 z-10">
