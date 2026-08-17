@@ -43,7 +43,7 @@ export default function Header({ designTheme, currentTab, handleNavClick, showHe
                   {showHelperOverlay && (
                     <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-[9px] font-mono bg-white text-black px-1 uppercase tracking-widest">Minimalist Menu</span>
                   )}
-                  {navItems.slice(0, 4).map((item) => (
+                  {navItems.slice(0, 4).map((item, index) => (
                     <button
                       key={item}
                       type="button"
@@ -52,7 +52,7 @@ export default function Header({ designTheme, currentTab, handleNavClick, showHe
                       className="flex flex-col cursor-pointer group/nav shrink-0 whitespace-nowrap text-left"
                     >
                       <span className="text-[8px] tracking-widest text-white/30 uppercase mb-0.5 font-mono transition-colors group-hover/nav:text-white/60">
-                        {item === "Home" ? "01" : item === "Destinations" ? "02" : item === "Experiences" ? "03" : "04"}
+                        {String(index + 1).padStart(2, "0")}
                       </span>
                       <span className={`text-xs font-semibold uppercase tracking-wider transition-all ${currentTab === item ? "text-white border-b border-white pb-0.5" : "text-white/60 hover:text-white"
                         }`}>
