@@ -1,1 +1,1 @@
-export type NavItem = "Home" | "Experiences" | "Destinations" | "About us";
+export type NavItem = "Home" | "Experiences" | "About us" | "Destinations";

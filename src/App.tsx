@@ -39,13 +39,13 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   // Renamed to fit the WanderLust travel theme
-  const navItems: NavItem[] = ["Home", "Experiences", "Destinations", "About us"];
+  const navItems: NavItem[] = ["Home", "Experiences", "About us", "Destinations"];
 
   const sectionIds: SectionIdMap = {
     Home: "wanderlust-banner-container",
     Experiences: "trusted-leaders-section",
-    Destinations: "popular-experiences-section",
     "About us": "why-travel-section",
+    Destinations: "popular-experiences-section",
   };
 
   const handleNavClick = (item: NavItem) => {
