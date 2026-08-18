@@ -7,6 +7,7 @@ import HeroSection from "./components/sections/HeroSection";
 import Destinations from "./components/sections/Destinations";
 import Experiences from "./components/sections/Experiences";
 import Testimonials from "./components/sections/Testimonials";
+import FAQ from "./components/sections/FAQ";
 import { motion, AnimatePresence, Variants } from "motion/react";
 import type { NavItem } from "./types/navigation";
 
@@ -156,6 +157,7 @@ export default function App() {
         <Destinations staggerContainer={staggerContainer} fadeInUp={fadeInUp} />
         <Experiences staggerContainer={staggerContainer} fadeInUp={fadeInUp} designTheme={designTheme} />
         <Testimonials staggerContainer={staggerContainer} fadeInUp={fadeInUp} designTheme={designTheme} />
+        <FAQ staggerContainer={staggerContainer} fadeInUp={fadeInUp} designTheme={designTheme} />
 
       </main>
 
