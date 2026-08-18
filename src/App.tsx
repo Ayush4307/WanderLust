@@ -2,6 +2,7 @@ import { useState } from "react";
 import CanvasBackground from "./components/layout/CanvasBackground";
 import Header from "./components/layout/Header";
 import MobileMenu from "./components/layout/MobileMenu";
+import PlanTripModal from "./components/modals/PlanTripModal";
 import HeroSection from "./components/sections/HeroSection";
 import Destinations from "./components/sections/Destinations";
 import Experiences from "./components/sections/Experiences";
@@ -37,6 +38,7 @@ export default function App() {
   const [currentTab, setCurrentTab] = useState<NavItem>("Home");
   const [showHelperOverlay, setShowHelperOverlay] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isPlanModalOpen, setIsPlanModalOpen] = useState<boolean>(false);
 
   // Renamed to fit the WanderLust travel theme
   const navItems: NavItem[] = ["Home", "Experiences", "About us", "Destinations"];
@@ -146,6 +148,7 @@ export default function App() {
               designTheme={designTheme} 
               fadeInUp={fadeInUp} 
               cardGlow={cardGlow}
+              onOpenPlanModal={() => setIsPlanModalOpen(true)}
             />
           </div>
         </div>
@@ -155,6 +158,12 @@ export default function App() {
         <Testimonials staggerContainer={staggerContainer} fadeInUp={fadeInUp} designTheme={designTheme} />
 
       </main>
+
+      {/* Interactive Trip Planner Modal */}
+      <PlanTripModal
+        isOpen={isPlanModalOpen}
+        onClose={() => setIsPlanModalOpen(false)}
+      />
     </div>
   );
 }
