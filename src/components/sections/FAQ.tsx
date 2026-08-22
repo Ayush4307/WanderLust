@@ -22,7 +22,7 @@ const faqs: FAQItem[] = [
   {
     category: "Flexibility",
     question: "Can I modify or customize my trip while traveling?",
-    answer: "Yes! Your 24×7 on-trip concierge is available via WhatsApp or direct phone call. Whether you want to add an extra day at a luxury heritage haveli, book a private sunset boat, or change dining reservations, we handle all real-time adjustments seamlessly.",
+    answer: "Absolutely. Your dedicated on-trip concierge is available 24/7 by WhatsApp or phone to help with changes as your journey unfolds. From extending your stay and arranging a private sunset boat to updating dining reservations, we coordinate each request smoothly, subject to availability and applicable costs.",
   },
   {
     category: "Safety",
