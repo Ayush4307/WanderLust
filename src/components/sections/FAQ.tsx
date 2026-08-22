@@ -17,7 +17,7 @@ const faqs: FAQItem[] = [
   {
     category: "Inclusions",
     question: "What is typically included in our luxury travel packages?",
-    answer: "Our packages include handpicked 4-star & 5-star accommodations, private air-conditioned transport, expert local English-speaking guides, verified safari permits, monument access, daily breakfast, and 24/7 dedicated on-trip concierge assistance.",
+    answer: "Our luxury packages include handpicked 4- and 5-star stays, private air-conditioned transport, expert English-speaking guides, daily breakfast, monument access, and 24/7 concierge support throughout your journey. Safari permits and other special experiences are arranged when included in your itinerary.",
   },
   {
     category: "Flexibility",
