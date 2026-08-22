@@ -12,7 +12,7 @@ const faqs: FAQItem[] = [
   {
     category: "Planning",
     question: "How does WanderLust create custom itineraries?",
-    answer: "Every journey begins with your personal travel curator. We discuss your travel dates, pace, accommodation preferences, and bucket-list experiences. Within 24 hours, we present a handcrafted day-by-day itinerary with private chauffeurs, boutique stays, and curated local experiences.",
+    answer: "We begin with a personal consultation to understand your travel style, preferred pace, interests, and must-see experiences. Your dedicated curator then designs a seamless day-by-day itinerary with thoughtfully selected stays, private transport, and authentic local experiences, tailored entirely to you.",
   },
   {
     category: "Inclusions",
